@@ -71,7 +71,7 @@ const PlaceOrder = () => {
         //API calls for COD
         case "cod":
           const response = await axios.post(
-            "http://localhost:4000/api/order/place",
+            "https://thestreetnest-backend.vercel.app/api/order/place",
             orderData,
             { headers: { Authorization: `Bearer ${token}` } }
           );

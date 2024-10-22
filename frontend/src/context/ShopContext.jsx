@@ -37,7 +37,7 @@ const ShopContextProvider = (props) => {
     if (token) {
       try {
         await axios.post(
-          "http://localhost:4000/api/cart/add",
+          "https://thestreetnest-backend.vercel.app/api/cart/add",
           { itemId, size },
           { headers: { Authorization: `Bearer ${token}` } }
         );
@@ -74,7 +74,7 @@ const ShopContextProvider = (props) => {
     if (token) {
       try {
         await axios.post(
-          "http://localhost:4000/api/cart/update",
+          "https://thestreetnest-backend.vercel.app/api/cart/update",
           { itemId, size, quantity },
           { headers: { Authorization: `Bearer ${token}` } }
         );
@@ -103,7 +103,7 @@ const ShopContextProvider = (props) => {
   const getProductsData = async () => {
     try {
       const repsonse = await axios.get(
-        "http://localhost:4000/api/product/list"
+        "https://thestreetnest-backend.vercel.app/api/product/list"
       );
 
       if (repsonse.data.success) {
@@ -120,7 +120,7 @@ const ShopContextProvider = (props) => {
   const getUserCart = async (token) => {
     try {
       const repsonse = await axios.post(
-        "http://localhost:4000/api/cart/get",
+        "https://thestreetnest-backend.vercel.app/api/cart/get",
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
