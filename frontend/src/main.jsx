@@ -1,4 +1,4 @@
-import { StrictMode } from 'react'
+import React, { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
@@ -20,10 +20,10 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
     children: [
-      // {
-      //   path: "/",
-      //   element: <Home />,
-      // },
+      {
+        path: "/",
+        element: <Home />,
+      },
       {
         path: "/collection",
         element: <Collection />,
@@ -67,3 +67,5 @@ createRoot(document.getElementById('root')).render(
    </ShopContextProvider>
   // </BrowserRouter>
 );
+
+
