@@ -5,7 +5,6 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './pages/Home.jsx'
 import Contact from './pages/Contact.jsx'
-import { BrowserRouter } from 'react-router-dom'
 import ShopContextProvider from './context/ShopContext.jsx'
 import Collection from './pages/Collection.jsx'
 import About from './pages/About.jsx'
@@ -61,11 +60,9 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById('root')).render(
-  // <BrowserRouter>
   <ShopContextProvider>
    <RouterProvider router={router} />
    </ShopContextProvider>
-  // </BrowserRouter>
 );
 
 
